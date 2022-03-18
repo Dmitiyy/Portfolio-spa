@@ -1,0 +1,177 @@
+.container
+  justify-content: center
+  align-items: center
+
+.projects
+  width: 950px
+  flex-direction: column
+  justify-content: center
+
+  h2
+    color: #fff
+    font-weight: bold
+    font-size: 55px
+  &__wrap
+    display: flex
+    justify-content: space-between
+    width: 100%
+    margin-top: 50px
+    img
+      width: 550px
+      height: 280px
+      border: 5px solid #000
+    ul
+      list-style: none
+      color: #fff
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      li
+        font-size: 30px
+        margin-bottom: 20px
+        display: table
+        cursor: pointer
+        text-align: left
+  &__btns
+    width: 100%
+    display: flex
+    justify-content: space-between
+    margin-top: 50px
+    a
+      width: 210px
+      cursor: pointer
+      height: 55px
+      background: #101820
+      color: #fff
+      display: flex
+      justify-content: center
+      align-items: center
+      text-decoration: none
+      font-family: 'Arvo', serif
+      font-weight: bold
+      font-size: 20px
+      border: none
+      box-shadow: 0px 0px 30px #000000
+    div
+      width: 55px
+      height: 55px
+      background: #F2AA4C
+      cursor: pointer
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        width: 30px
+
+.projects__nav-active
+  border-bottom: 4px solid #F2AA4C
+
+.projects__loading
+  display: none
+  img
+    width: 100px
+
+@media (max-width: 1243px) and (min-width: 1083px)
+  .projects
+    width: 100%
+    padding-left: 50px
+    padding-right: 50px
+
+@media (max-width: 1082px) and (min-width: 520px)
+  .projects__loading
+    min-height: 100vh
+    width: 100%
+    justify-content: center
+  .projects
+    width: 100%
+    flex-direction: column
+    justify-content: center
+    min-height: 100vh
+    padding-left: 50px
+    padding-right: 50px
+    padding-top: 50px
+    padding-bottom: 50px
+    h2
+      text-align: center
+      font-size: 40px
+  .projects__wrap
+    flex-direction: column-reverse
+    align-items: center
+    ul
+      margin-bottom: 40px
+      margin-left: auto
+      margin-right: auto
+      li
+        text-align: center
+        font-size: 20px
+    img
+      width: 460px
+      height: 230px
+  .projects__btns
+    a
+      margin: 0 auto
+    div
+      display: none
+
+@media (max-width: 519px) and (min-width: 444px)
+  .projects__loading
+    min-height: 100vh
+  .projects
+    width: 100%
+    min-height: calc(100vh - 50px)
+    padding-left: 50px
+    padding-right: 50px
+    padding-top: 50px
+    padding-bottom: 50px
+    h2
+      text-align: center
+      font-size: 40px
+  .projects__wrap
+    flex-direction: column-reverse
+    align-items: center
+    ul
+      margin-bottom: 40px
+      margin-left: auto
+      margin-right: auto
+      li
+        text-align: center
+        font-size: 20px
+    img
+      width: 400px
+      height: 200px
+  .projects__btns
+    a
+      margin: 0 auto
+    div
+      display: none
+
+@media (max-width: 443px) and (min-width: 320px)
+  .projects__loading
+    min-height: 100vh
+  .projects
+    width: 100%
+    min-height: calc(100vh - 50px)
+    padding-left: 10px
+    padding-right: 10px
+    padding-top: 50px
+    padding-bottom: 50px
+    h2
+      text-align: center
+      font-size: 40px
+  .projects__wrap
+    flex-direction: column-reverse
+    align-items: center
+    ul
+      margin-bottom: 40px
+      margin-left: auto
+      margin-right: auto
+      li
+        font-size: 20px
+    img
+      width: 100%
+      height: auto
+  .projects__btns
+    a
+      margin: 0 auto
+    div
+      display: none
