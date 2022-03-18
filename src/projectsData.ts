@@ -1,7 +1,7 @@
 import Money from './images/money_heist.png';
 import Own from './images/selectpad.jpg';
 import Tasty from './images/tasty_cakes.png';
-import Falet from './images/falet.png';
+import Falet from './images/blog1.png';
 
 interface TProject {
   img: string;
@@ -25,6 +25,6 @@ export const projectsData: Array<TProject> = [
   },
   {
     img: Falet, 
-    link: 'https://mern-falet.herokuapp.com/', name: 'Social network', id: 3
+    link: 'https://dblog-official.vercel.app/', name: 'Daptellum Blog', id: 3
   },
 ]
