@@ -1,20 +1,21 @@
-import { Fragment, useState } from "react";
+import { Fragment, useDeferredValue, useState } from "react";
 import ArrowIcon from '../images/arrow.png';
 import { projectsData } from "../projectsData";
 
 const Projects = () => {
+  const data = useDeferredValue(projectsData);
   const [activeProject, setActiveProject] = useState<number>(0);
 
   return (
     <Fragment>
       <div className="projects__loading"><img src="/images/loading.svg" alt="loading"/></div>
       <div className="projects">
-        <h2>{projectsData[activeProject].name}</h2>
+        <h2>{data[activeProject].name}</h2>
         <div className="projects__wrap"> 
-          <img src={projectsData[activeProject].img} alt="project" />
+          <img src={data[activeProject].img} alt="project" />
           <ul className="projects__wrap-categories">
             {
-              projectsData.map(item => {
+              data.map(item => {
                 return (
                   <li key={item.id} 
                   className={item.id === activeProject ? 'projects__nav-active' : ''}
@@ -27,7 +28,7 @@ const Projects = () => {
           </ul>
         </div>
         <div className="projects__btns">
-          <a href={projectsData[activeProject].link} target="_blank" rel="noreferrer">Watch demo</a>
+          <a href={data[activeProject].link} target="_blank" rel="noreferrer">Watch demo</a>
           <div onClick={() => {
             setActiveProject(prev => {
               if (prev === 3) {return 0}
